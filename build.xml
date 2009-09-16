@@ -20,7 +20,7 @@
 ** dialog. You have to check it in first.
 **
 -->
-<project name="myPluginName" default="dist" basedir=".">
+<project name="michigan_left" default="dist" basedir=".">
     <!--
       ************************************************
       ** should not be necessary to change the following properties
@@ -63,9 +63,6 @@
     -->
     <target name="dist" depends="compile,revision">
         <echo message="creating ${plugin.jar.name} ... "/>
-        <copy todir="${plugin.build.dir}/resources">
-            <fileset dir="resources"/>
-        </copy>
         <copy todir="${plugin.build.dir}/images">
             <fileset dir="images"/>
         </copy>
@@ -85,12 +82,12 @@
         ************************************************
     -->
             <manifest>
-                <attribute name="Author" value="..."/>
-                <attribute name="Plugin-Class" value="..."/>
+                <attribute name="Author" value="Nakor"/>
+                <attribute name="Plugin-Class" value="MichiganLeft.MichiganLeft"/>
                 <attribute name="Plugin-Date" value="${version.entry.commit.date}"/>
-                <attribute name="Plugin-Description" value="..."/>
+                <attribute name="Plugin-Description" value="Adds no left turn for sets of 4 or 5 ways"/>
                 <attribute name="Plugin-Link" value="..."/>
-                <attribute name="Plugin-Mainversion" value="..."/>
+                <attribute name="Plugin-Mainversion" value="1"/>
                 <attribute name="Plugin-Version" value="${version.entry.commit.revision}"/>
             </manifest>
         </jar>
